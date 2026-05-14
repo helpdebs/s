@@ -131,6 +131,9 @@
     }
 
     .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border: 2px solid #111;
       border-radius: 16px;
       padding: 13px 18px;
@@ -140,6 +143,8 @@
       cursor: pointer;
       box-shadow: 5px 5px 0 #111;
       transition: .18s ease;
+      text-decoration: none;
+      color: var(--text);
     }
 
     .btn:hover {
@@ -154,6 +159,11 @@
 
     .btn.secondary {
       background: var(--blue);
+    }
+
+    .btn.pdf {
+      background: var(--yellow);
+      color: var(--text);
     }
 
     .toolbar {
@@ -341,9 +351,7 @@
     }
 
     @media (max-width: 780px) {
-      body {
-        padding: 10px;
-      }
+      body { padding: 10px; }
 
       .window {
         border-radius: 14px;
@@ -351,13 +359,8 @@
         margin-bottom: 16px;
       }
 
-      .topbar {
-        padding: 10px 12px;
-      }
-
-      .brand {
-        font-size: 1rem;
-      }
+      .topbar { padding: 10px 12px; }
+      .brand { font-size: 1rem; }
 
       .buttons span {
         width: 25px;
@@ -365,9 +368,7 @@
         font-size: .8rem;
       }
 
-      .hero {
-        padding: 22px 14px;
-      }
+      .hero { padding: 22px 14px; }
 
       .eyebrow {
         font-size: .68rem;
@@ -450,13 +451,8 @@
         font-size: 1.1rem;
       }
 
-      .category-body {
-        padding: 10px;
-      }
-
-      .items {
-        gap: 6px;
-      }
+      .category-body { padding: 10px; }
+      .items { gap: 6px; }
 
       .item {
         grid-template-columns: auto 1fr auto;
@@ -489,9 +485,7 @@
         box-shadow: 4px 4px 0 #111;
       }
 
-      .footer h2 {
-        font-size: 1.55rem;
-      }
+      .footer h2 { font-size: 1.55rem; }
 
       .footer ol {
         font-size: .86rem;
@@ -500,9 +494,7 @@
     }
 
     @media (max-width: 380px) {
-      .item {
-        grid-template-columns: auto 1fr;
-      }
+      .item { grid-template-columns: auto 1fr; }
 
       .copy {
         grid-column: 2;
@@ -534,6 +526,7 @@
         </p>
 
         <div class="actions">
+          <a class="btn pdf" href="Samara_Vocabulary_Checklist.pdf" download>Download PDF</a>
           <button class="btn primary" id="expandBtn">Expand all</button>
           <button class="btn secondary" id="resetBtn">Reset checklist</button>
         </div>
@@ -569,162 +562,74 @@
         title: "Career Transition",
         subtitle: "Talking about change & new beginnings",
         items: [
-          "career change",
-          "transition",
-          "new chapter",
-          "fresh start",
-          "opportunity",
-          "promotion",
-          "senior position",
-          "responsibility",
-          "workload",
-          "challenge",
-          "stability",
-          "uncertainty",
-          "expectations",
-          "onboarding",
-          "resignation",
-          "career path",
-          "leadership role"
+          "career change", "transition", "new chapter", "fresh start", "opportunity",
+          "promotion", "senior position", "responsibility", "workload", "challenge",
+          "stability", "uncertainty", "expectations", "onboarding", "resignation",
+          "career path", "leadership role"
         ]
       },
       {
         title: "Emotions & Pressure",
         subtitle: "Talking about emotional states",
         items: [
-          "overwhelmed",
-          "emotionally drained",
-          "exhausted",
-          "anxious",
-          "relieved",
-          "burned out",
-          "self-esteem",
-          "confidence",
-          "pressure",
-          "fear of failure",
-          "emotional recovery",
-          "mentally tired",
-          "frustrated",
-          "insecure"
+          "overwhelmed", "emotionally drained", "exhausted", "anxious", "relieved",
+          "burned out", "self-esteem", "confidence", "pressure", "fear of failure",
+          "emotional recovery", "mentally tired", "frustrated", "insecure"
         ]
       },
       {
         title: "Toxic Workplace",
         subtitle: "Professional relationship vocabulary",
         items: [
-          "toxic environment",
-          "moral harassment",
-          "humiliation",
-          "disrespect",
-          "micromanagement",
-          "pressure",
-          "abusive behavior",
-          "lack of support",
-          "criticism",
-          "tension",
-          "difficult manager",
-          "professional boundaries",
-          "hostile environment",
-          "unfair treatment"
+          "toxic environment", "moral harassment", "humiliation", "disrespect",
+          "micromanagement", "pressure", "abusive behavior", "lack of support",
+          "criticism", "tension", "difficult manager", "professional boundaries",
+          "hostile environment", "unfair treatment"
         ]
       },
       {
         title: "Confidence & Growth",
         subtitle: "Identity and personal development",
         items: [
-          "growth",
-          "self-awareness",
-          "maturity",
-          "resilience",
-          "adaptability",
-          "identity",
-          "self-worth",
-          "emotional intelligence",
-          "strengths",
-          "progress",
-          "recovery",
-          "self-trust",
-          "courage",
-          "transformation"
+          "growth", "self-awareness", "maturity", "resilience", "adaptability",
+          "identity", "self-worth", "emotional intelligence", "strengths", "progress",
+          "recovery", "self-trust", "courage", "transformation"
         ]
       },
       {
         title: "Engineering & Corrosion",
         subtitle: "Technical communication",
         items: [
-          "corrosion",
-          "corrosion engineer",
-          "materials",
-          "inspection",
-          "coating",
-          "degradation",
-          "structural integrity",
-          "maintenance",
-          "technical analysis",
-          "engineering solutions",
-          "root cause",
-          "prevention",
-          "technical report",
-          "pipeline",
-          "operational safety",
-          "technical expertise"
+          "corrosion", "corrosion engineer", "materials", "inspection", "coating",
+          "degradation", "structural integrity", "maintenance", "technical analysis",
+          "engineering solutions", "root cause", "prevention", "technical report",
+          "pipeline", "operational safety", "technical expertise"
         ]
       },
       {
         title: "Future & Possibilities",
         subtitle: "Talking about plans and expectations",
         items: [
-          "future",
-          "possibility",
-          "expectation",
-          "intention",
-          "plan",
-          "prediction",
-          "goal",
-          "ambition",
-          "dream",
-          "next step",
-          "upcoming changes",
-          "professional future",
-          "growth potential",
-          "achievement"
+          "future", "possibility", "expectation", "intention", "plan", "prediction",
+          "goal", "ambition", "dream", "next step", "upcoming changes",
+          "professional future", "growth potential", "achievement"
         ]
       },
       {
         title: "Advanced Connectors",
         subtitle: "Structuring complex ideas",
         items: [
-          "although",
-          "even though",
-          "whereas",
-          "however",
-          "on the other hand",
-          "despite that",
-          "as a result",
-          "therefore",
-          "looking back",
-          "in the long run"
+          "although", "even though", "whereas", "however", "on the other hand",
+          "despite that", "as a result", "therefore", "looking back", "in the long run"
         ]
       },
       {
         title: "High-Frequency Verbs",
         subtitle: "Reusable conversation vocabulary",
         items: [
-          "to handle",
-          "to deal with",
-          "to overcome",
-          "to improve",
-          "to struggle",
-          "to achieve",
-          "to recover",
-          "to rebuild",
-          "to adjust",
-          "to grow",
-          "to realize",
-          "to avoid",
-          "to challenge",
-          "to support",
-          "to pursue"
+          "to handle", "to deal with", "to overcome", "to improve", "to struggle",
+          "to achieve", "to recover", "to rebuild", "to adjust", "to grow",
+          "to realize", "to avoid", "to challenge", "to support", "to pursue"
         ]
       }
     ];
